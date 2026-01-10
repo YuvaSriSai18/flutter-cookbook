@@ -23,6 +23,12 @@ class _CurrencyConverterHomePageState extends State {
   }
 
   @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     print("rebuilt again");
     return Scaffold(
@@ -41,7 +47,7 @@ class _CurrencyConverterHomePageState extends State {
           Container(
             margin: EdgeInsets.all(10),
             height: 120,
-            width: 120,
+            width: double.infinity,
 
             // foregroundDecoration: ShapeDecoration(
             //   shape: BeveledRectangleBorder(
@@ -49,18 +55,18 @@ class _CurrencyConverterHomePageState extends State {
             //     borderRadius: BorderRadiusGeometry.all(Radius.circular(12)),
             //   ),
             // ),
-            decoration: BoxDecoration(
-              color: Colors.blue[300],
-              shape: BoxShape.rectangle,
-              borderRadius: BorderRadius.all(Radius.circular(14)),
+            // decoration: BoxDecoration(
+            //   color: Colors.blue[300],
+            //   shape: BoxShape.rectangle,
+            //   borderRadius: BorderRadius.all(Radius.circular(14)),
 
-              // border: Border.all(width: 1),
-            ),
+            //   // border: Border.all(width: 1),
+            // ),
             child: Center(
               child: Text(
-                res.toString(),
+                "INR ${res != 0 ? res.toStringAsFixed(2) : "0"}",
                 style: const TextStyle(
-                  fontSize: 20,
+                  fontSize: 40,
                   fontWeight: FontWeight.bold,
                 ),
               ),
