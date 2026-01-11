@@ -17,7 +17,7 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
-
+.apk
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
@@ -33,6 +33,55 @@ migrate_working_dir/
 /build/
 /coverage/
 
+# Dart/Flutter/Pub cache and pubspec lock files
+.packages
+pubspec.lock
+pubspec_overrides.yaml
+
+# Generated files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+
+# Flutter specific
+flutter_*.png
+flutter_export_environment.sh
+.flutter-plugins-dependencies
+.fvm/
+.fvm/flutter_sdk
+
+# Dart specific
+.dart_tool/
+build/
+pubspec.lock
+
+# Android/iOS build artifacts
+.gradle/
+.gradle
+*.gradle
+local.properties
+GeneratedPluginRegistrant.java
+
+# iOS Pods
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+
+# macOS
+macos/Flutter/Flutter-Release.xcconfig
+macos/Flutter/GeneratedPluginRegistrant.java
+
+# Windows
+windows/flutter/generated_plugin_registrant.cc
+windows/flutter/generated_plugins.cmake
+
+# Web
+web/web_dependencies/
+
 # Symbolication related
 app.*.symbols
 
@@ -43,3 +92,35 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/android/.gradle/
+/android/build/
+
+# Generated code
+*.g.dart
+*.config.dart
+*.freezed.dart
+*.chopper.dart
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS specific
+Thumbs.db
+*.exe
+*.dll
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*~
